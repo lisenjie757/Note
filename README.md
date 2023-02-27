@@ -3,6 +3,6 @@
 
 ## 技术栈总览
 
-[项目主页](https://github.com/lisenjie757/blog/)
+[项目主页](https://github.com/lisenjie757/Blog/)
 
 ![技术栈](/assets/技术栈.jpg)
