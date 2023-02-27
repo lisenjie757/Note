@@ -1,0 +1,7 @@
+
+MEMORY USAGES
+input: 
+output: 
+data: 
+MODEL: 
+TOTAL: 
