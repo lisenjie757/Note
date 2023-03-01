@@ -5,4 +5,4 @@
 
 [项目主页](https://github.com/lisenjie757/Blog/)
 
-![技术栈](/assets/技术栈.jpg)
+![技术栈](https://i.imgur.com/6hevgXA.png)
