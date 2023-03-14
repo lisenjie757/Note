@@ -8,6 +8,8 @@ data/
 
 **/**.onnx
 **/**.pt
+**/**.pb
+**/**.tflite
 **/**.kmodel
 
 项目文档/tmp/
