@@ -131,7 +131,7 @@ print(label)
 
 
 
-![lesson2_data_10_1](https://i.imgur.com/UEoa2W0.png)
+![result](https://i.imgur.com/UEoa2W0.png)
 
 
     tensor(1)
