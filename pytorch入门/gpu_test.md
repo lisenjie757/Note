@@ -1,3 +1,5 @@
+# lesson0. GPU性能测试
+
 ```python
 import torch
 import time
@@ -28,8 +30,8 @@ t0 = time.time()
 c = torch.matmul(a, b)
 t2 = time.time()
 print(a.device, t2 - t0, c.norm(2))
-
 ```
+
 
     1.12.0
     True

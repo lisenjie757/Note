@@ -1,3 +1,5 @@
+# lesson4. 构建神经网络
+
 ```python
 import os 
 import torch
@@ -10,8 +12,8 @@ from torchvision import datasets, transforms
       return torch._C._cuda_getDeviceCount() > 0
 
 
-# 获取训练设备
-## 查看有无可用GPU
+## 获取训练设备
+- 查看有无可用GPU
 
 
 ```python
@@ -22,10 +24,10 @@ print(device)
     cpu
 
 
-# 定义神经网络类
-## super(NeuralNetwork,self) ：查找NeuralNetwork的父类，对self实施父类的方法
-## nn.Flatten(x,[start=1,end=-1]) ：对输入张量进行指定维数降维，此处将(1,28,28)降成(1,28*28)
-## nn.Sequential() ：序列容器，将神经网络模块按顺序添加到容器中
+## 定义神经网络类
+- super(NeuralNetwork,self) ：查找NeuralNetwork的父类，对self实施父类的方法
+- nn.Flatten(x,[start=1,end=-1]) ：对输入张量进行指定维数降维，此处将(1,28,28)降成(1,28*28)
+- nn.Sequential() ：序列容器，将神经网络模块按顺序添加到容器中
 
 
 ```python
@@ -85,7 +87,7 @@ print(y_pred)
     tensor([0])
 
 
-# 模型层解构
+## 模型层解构
 
 
 ```python
@@ -197,8 +199,8 @@ print(pred_probab)
              0.1142]], grad_fn=<SoftmaxBackward0>)
 
 
-# 模型参数
-## nn.Moudle会自动跟踪保存模型参数，使用parameters()或named_parameters()获取
+## 模型参数
+- nn.Moudle会自动跟踪保存模型参数，使用parameters()或named_parameters()获取
 
 
 ```python

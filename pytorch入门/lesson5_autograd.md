@@ -1,8 +1,10 @@
+# lesson5. 自动求导机制
+
 ```python
 import torch
 ```
 
-# 定义最简单的单层神经网络
+## 定义最简单的单层神经网络
 
 
 ```python
@@ -46,8 +48,8 @@ print(b.grad)
 
 
 ## 禁用梯度跟踪
-### 有时已有训练好的模型，我们只想推理，不想更新参数，可以使用torch.no_grad()或detach()来禁用梯度计算
-### 以下是可能要禁用梯度跟踪的几点理由：1.做微调时可能需要冻结某些参数 2.只做推理时提高计算效率
+- 有时已有训练好的模型，我们只想推理，不想更新参数，可以使用torch.no_grad()或detach()来禁用梯度计算
+- 以下是可能要禁用梯度跟踪的几点理由：1.做微调时可能需要冻结某些参数 2.只做推理时提高计算效率
 
 
 ```python
@@ -68,9 +70,9 @@ print(z_det.requires_grad)
     False
 
 
-# 张量梯度和Jacobian Products
-## 1.PyTorch backward grad实际计算保存的是Jacobian Products=vT*J，默认v=tensor(1.0)
-## 2.PyTorch的机制会累积梯度，所以需要清零，实际训练时优化器会自动帮助我们清零
+## 张量梯度和Jacobian Products
+1. PyTorch backward grad实际计算保存的是Jacobian Products=vT*J，默认v=tensor(1.0)
+2. PyTorch的机制会累积梯度，所以需要清零，实际训练时优化器会自动帮助我们清零
 
 
 ```python

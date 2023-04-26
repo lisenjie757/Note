@@ -1,3 +1,5 @@
+# lesson6. 优化机制
+
 ```python
 import torch
 from torch import nn
@@ -6,8 +8,8 @@ from torchvision import datasets
 from torchvision.transforms import ToTensor,Lambda
 ```
 
-# 前置代码
-## 数据集&数据加载器&构建模型
+## 前置代码
+### 数据集&数据加载器&构建模型
 
 
 ```python
@@ -48,7 +50,7 @@ class NeuralNetwork(nn.Module):
 model = NeuralNetwork().to('cuda')
 ```
 
-# 超参数
+### 超参数
 
 
 ```python
@@ -57,8 +59,8 @@ batch_size = 64
 epochs = 5
 ```
 
-# 优化循环
-## 损失函数
+## 优化循环
+### 损失函数
 
 
 ```python
@@ -66,7 +68,7 @@ epochs = 5
 loss_fn = nn.CrossEntropyLoss().to('cuda')
 ```
 
-## 优化器
+### 优化器
 
 
 ```python
@@ -74,7 +76,7 @@ loss_fn = nn.CrossEntropyLoss().to('cuda')
 optimizer = torch.optim.SGD(model.parameters(),lr=learning_rate)
 ```
 
-# 完整实现
+## 完整实现
 
 
 ```python

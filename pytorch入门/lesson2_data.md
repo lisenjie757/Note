@@ -1,3 +1,5 @@
+# lesson2. 数据集和数据加载
+
 ```python
 import torch
 from torch.utils.data import Dataset
@@ -10,11 +12,12 @@ import matplotlib.pyplot as plt
       from .autonotebook import tqdm as notebook_tqdm
 
 
-# 加载预加载数据集
-## root ：训练集/测试集存储路径
-## train ：确定是训练集还是测试集
-## download=True ：如果root不可用 从互联网上下载数据
-## transform / target_transform ：指定特征和标签的转换
+## 加载预加载数据集
+
+- root ：训练集/测试集存储路径
+- train ：确定是训练集还是测试集
+- download=True ：如果root不可用 从互联网上下载数据
+- transform / target_transform ：指定特征和标签的转换
 
 
 ```python
@@ -33,7 +36,7 @@ test_data = datasets.FashionMNIST(
 )
 ```
 
-# 迭代和可视化数据集
+## 迭代和可视化数据集
 
 
 ```python
@@ -67,10 +70,11 @@ plt.show()
     
 
 
-# 创建自定义数据集
-## __init__ ：创建类对象时运行一次 包括图像 标注 和 变换
-## __len__ ：返回数据集样本数
-## __getitem__ ：根据索引加载和返回数据样本 包括图像 标注 和 变换
+## 创建自定义数据集
+
+- \_\_init__ ：创建类对象时运行一次 包括图像 标注 和 变换
+- \_\_len__ ：返回数据集样本数
+- \_\_getitem__ ：根据索引加载和返回数据样本 包括图像 标注 和 变换
 
 
 ```python
@@ -99,8 +103,8 @@ class CustomImageDataset(Dataset):
         return image,label
 ```
 
-# 使用DataLoaders训练Data
-## DataLoader的作用：minibatches采样，每epoch reshuffle data，多线程加速
+## 使用DataLoaders训练Data
+- DataLoader的作用：minibatches采样，每epoch reshuffle data，多线程加速
 
 
 ```python
@@ -110,7 +114,7 @@ train_dataloader = DataLoader(training_data,batch_size=64,shuffle=True)
 test_dataloader = DataLoader(test_data,batch_size=64,shuffle=True)
 ```
 
-# 通过DataLoader迭代
+## 通过DataLoader迭代
 
 
 ```python

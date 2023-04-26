@@ -1,9 +1,11 @@
+# lesson7. 保存和加载模型
+
 ```python
 import torch
 import torchvision.models as models
 ```
 
-# 保存和加载模型权重
+## 保存和加载模型权重
 
 
 ```python
@@ -77,7 +79,7 @@ model.eval()
 
 
 
-# 保存和加载整个模型结构和权重
+## 保存和加载整个模型结构和权重
 
 
 ```python
@@ -85,8 +87,8 @@ torch.save(model,"model.pth")
 model = torch.load("model.pth")
 ```
 
-# 保存和加载训练时的断点
-## 1.导入必要的库
+## 保存和加载训练时的断点
+### 1.导入必要的库
 
 
 ```python
@@ -96,7 +98,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 ```
 
-## 2.定义和初始化神经网络
+### 2.定义和初始化神经网络
 
 
 ```python
