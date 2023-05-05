@@ -1,4 +1,3 @@
-forked from my host
 # 个人技术积累和博客
 
 ## 技术栈总览
